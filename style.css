@@ -735,7 +735,16 @@ footer p { font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.35); let
   font-size: 14px; font-weight: 300; color: rgba(245,240,232,0.4);
   text-align: center; line-height: 1.7; max-width: 340px;
 }
-
+@media (max-width: 1250px) {
+  .univers {
+    padding: 72px 32px;
+  }
+  .univers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .univers-grid .u-card:last-child {
+    grid-column: 1 / -1;
+  }}
 /* ─────────────────────────────────────────────
    TABLETTE  ≤ 1024px
 ───────────────────────────────────────────── */
@@ -788,7 +797,7 @@ footer p { font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.35); let
     width: 280px; height: 280px;
   }
   .about-logo-frame img {
-    width: 210px; height: 210px;
+    width: 280px; height: 280px;
   }
 
   /* HORAIRES */
