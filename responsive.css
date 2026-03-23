@@ -1,0 +1,408 @@
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE — +2 VAPE
+   À coller à la fin de style.css
+   Breakpoints :
+     Tablette  : max-width 1024px
+     Mobile L  : max-width 768px
+     Mobile S  : max-width 480px
+═══════════════════════════════════════════════════════════ */
+
+
+/* ─────────────────────────────────────────────
+   TABLETTE  ≤ 1024px
+───────────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+  /* NAV */
+  nav {
+    padding: 0 32px;
+  }
+  .nav-links {
+    gap: 20px;
+  }
+  .nav-links a {
+    font-size: 12px;
+  }
+
+  /* HERO */
+  .hero {
+    grid-template-columns: 1fr 420px;
+    min-height: auto;
+  }
+  .hero-left {
+    padding: 60px 48px 60px 32px;
+  }
+  .hero-h1 {
+    font-size: clamp(42px, 5vw, 64px);
+  }
+  .hero-logo-wrap img {
+    width: 280px; height: 280px;
+  }
+
+  /* UNIVERS */
+  .univers {
+    padding: 72px 32px;
+  }
+  .univers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .univers-grid .u-card:last-child {
+    grid-column: 1 / -1;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 72px 32px;
+    grid-template-columns: 360px 1fr;
+    gap: 60px;
+  }
+  .about-logo-frame {
+    width: 280px; height: 280px;
+  }
+  .about-logo-frame img {
+    width: 210px; height: 210px;
+  }
+
+  /* HORAIRES */
+  .horaires {
+    padding: 72px 32px;
+    gap: 48px;
+  }
+  .hor-intro-title {
+    font-size: 38px;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 72px 32px;
+  }
+  .contact-block {
+    padding: 40px 32px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 24px 32px;
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   MOBILE L  ≤ 768px
+───────────────────────────────────────────── */
+@media (max-width: 768px) {
+
+  /* NAV */
+  nav {
+    padding: 0 20px;
+    height: 60px;
+    position: sticky;
+  }
+  .nav-links {
+    display: none; /* masqué sur mobile — burger à implémenter si besoin */
+  }
+  .nav-cta {
+    display: none;
+  }
+  .nav-reseau ul {
+    gap: 10px;
+  }
+  .nav-reseau ul img {
+    height: 30px;
+  }
+
+  /* HERO — colonne unique */
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: auto;
+  }
+  .hero-left {
+    padding: 48px 20px 40px;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    order: 2;
+  }
+  .hero-right {
+    order: 1;
+    padding: 40px 20px 32px;
+    gap: 28px;
+  }
+  .hero-h1 {
+    font-size: clamp(38px, 10vw, 56px);
+  }
+  .hero-sub {
+    font-size: clamp(16px, 4vw, 22px);
+  }
+  .hero-p {
+    font-size: 16px;
+  }
+  .hero-logo-wrap {
+    width: 180px; height: 180px;
+    border-width: 2px;
+  }
+  .hero-logo-wrap img {
+    width: 140px; height: 140px;
+  }
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero-btns {
+    flex-direction: column;
+  }
+  .btn {
+    text-align: center;
+    width: 100%;
+  }
+
+  /* TICKER */
+  .ticker-wrap {
+    height: 38px;
+  }
+  .ticker-track span {
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
+
+  /* SECTION HEADER */
+  .s-header {
+    margin-bottom: 40px;
+  }
+  .s-title {
+    font-size: 30px;
+  }
+
+  /* UNIVERS */
+  .univers {
+    padding: 56px 20px;
+  }
+  .univers-grid {
+    grid-template-columns: 1fr;
+  }
+  .univers-grid .u-card:last-child {
+    grid-column: auto;
+  }
+  .u-card {
+    padding: 36px 24px;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 56px 20px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .about-visual {
+    justify-content: center;
+  }
+  .about-visual::before {
+    font-size: 160px;
+  }
+  .about-logo-frame {
+    width: 220px; height: 220px;
+  }
+  .about-logo-frame img {
+    width: 100%; height: 100%;
+  }
+  .about-title {
+    font-size: 30px;
+  }
+
+  /* HORAIRES */
+  .horaires {
+    padding: 56px 20px;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hor-intro-title {
+    font-size: 32px;
+  }
+  .hor-intro-body {
+    font-size: 15px;
+  }
+  .hor-day {
+    font-size: 15px;
+  }
+  .hor-time {
+    font-size: 14px;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 56px 20px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .contact-block {
+    padding: 36px 24px;
+  }
+  .cb-title {
+    font-size: 26px;
+  }
+  .map-block {
+    min-height: 140px;
+    padding: 24px 20px;
+  }
+  .map-addr {
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+  }
+
+  /* AGE GATE */
+  .ag-card {
+    padding: 40px 28px;
+  }
+  .ag-title {
+    font-size: 26px;
+  }
+  .ag-btns {
+    grid-template-columns: 1fr;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 20px;
+    flex-direction: column;
+    text-align: center;
+    gap: 14px;
+  }
+  .f-social {
+    justify-content: center;
+  }
+}
+
+
+/* ─────────────────────────────────────────────
+   MOBILE S  ≤ 480px
+───────────────────────────────────────────── */
+@media (max-width: 480px) {
+
+  /* NAV */
+  nav {
+    padding: 0 16px;
+    height: 56px;
+  }
+  .nav-logo-name {
+    font-size: 17px;
+  }
+
+  /* HERO */
+  .hero-left {
+    padding: 36px 16px 32px;
+  }
+  .hero-right {
+    padding: 32px 16px 24px;
+  }
+  .hero-h1 {
+    font-size: clamp(32px, 9vw, 44px);
+  }
+  .hero-logo-wrap {
+    width: 150px; height: 150px;
+  }
+  .hero-logo-wrap img {
+    width: 115px; height: 115px;
+  }
+  .h-stat-val {
+    font-size: 22px;
+  }
+
+  /* UNIVERS */
+  .univers {
+    padding: 44px 16px;
+  }
+  .u-card {
+    padding: 28px 18px;
+  }
+  .u-name {
+    font-size: 22px;
+  }
+  .u-num {
+    font-size: 12px;
+  }
+
+  /* ABOUT */
+  .about {
+    padding: 44px 16px;
+  }
+  .about-logo-frame {
+    width: 190px; height: 190px;
+  }
+  .about-title {
+    font-size: 26px;
+  }
+  .about-body {
+    font-size: 14px;
+  }
+  .about-pills {
+    gap: 8px;
+  }
+  .pill {
+    font-size: 10px;
+    padding: 7px 14px;
+  }
+
+  /* HORAIRES */
+  .horaires {
+    padding: 44px 16px;
+  }
+  .hor-intro-title {
+    font-size: 28px;
+  }
+  .parking-note p {
+    font-size: 13px;
+  }
+  .hor-row {
+    padding: 16px 0;
+  }
+
+  /* CONTACT */
+  .contact {
+    padding: 44px 16px;
+  }
+  .contact-block {
+    padding: 28px 18px;
+  }
+  .cb-title {
+    font-size: 22px;
+    margin-bottom: 24px;
+  }
+  .ci-val {
+    font-size: 13px;
+  }
+  .social-link {
+    padding: 14px 16px;
+  }
+
+  /* SECTION HEADERS */
+  .s-title {
+    font-size: 26px;
+  }
+  .s-header {
+    margin-bottom: 32px;
+  }
+
+  /* FOOTER */
+  footer {
+    padding: 18px 16px;
+  }
+  footer p {
+    font-size: 10px;
+  }
+
+  /* AGE GATE */
+  .ag-card {
+    padding: 32px 20px;
+  }
+  .ag-title {
+    font-size: 22px;
+  }
+  .ag-sub {
+    font-size: 13px;
+  }
+  .ag-btn {
+    padding: 13px 16px;
+    font-size: 13px;
+  }
+}
