@@ -124,10 +124,10 @@ height: 40px;
 
 .hero-kicker {
   display: inline-flex; align-items: center; gap: 4px;
-  margin-bottom: 26px;
+  margin-bottom: 6px;
   animation: fadeUp .6s ease both;
 }
-.kicker-line { width: 22px; height: 1px; background: var(--yellow2); }
+.kicker-line { width: 5px; height: 1px; background: var(--yellow2); }
 .kicker-txt {
   font-size: 15px; font-weight: 600; letter-spacing: 3px; text-transform: uppercase;
   color: var(--ink3);
@@ -886,11 +886,9 @@ footer p { font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.35); let
   margin: 0;
 }
 .hero-boutique img {  display: block;
-
+margin: 0;
   max-width: 100%;   /* clé du responsive */
   height: auto;      /* conserve ratio */
-
-  width: 650px; 
 }
   .hero-h1 {
     font-size: clamp(38px, 10vw, 56px);
@@ -914,8 +912,10 @@ footer p { font-size: 12px; font-weight: 300; color: rgba(245,240,232,0.35); let
     visibility: hidden;
   }
   .hero-btns {
+    margin-top: 20px;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center; /* empêche le stretch */
   gap: 12px;
 }
