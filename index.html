@@ -58,11 +58,10 @@
 <meta name="twitter:title" content="+2 VAPE — Vape Shop & CBD · Les Pennes Mirabeau">
 <meta name="twitter:description" content="Cigarettes électroniques, e-liquides, CBD. Conseil gratuit. Ouvert 6j/7. Les Pennes Mirabeau (13170).">
 <meta name="twitter:image" content="https://www.plus2vape.com/image-removebg-preview.png">
-
+<link rel="preload" href="font.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="IMG_3264-1.jpg">
 <!-- ══════════════════════════════════════════
      SCHEMA.ORG — LocalBusiness (JSON-LD)
-     👉 C'est le plus important pour Google Maps
-        et le référencement local
 ══════════════════════════════════════════ -->
 <script type="application/ld+json">
 {
@@ -233,7 +232,6 @@
 
 <!-- ══════════════════════════════════════════
      SCHEMA.ORG — FAQ
-     (génère des rich snippets dans Google)
 ══════════════════════════════════════════ -->
 <script type="application/ld+json">
 {
@@ -284,7 +282,7 @@
 }
 </script>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Mulish:wght@300;400;600&display=swap" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Mulish:wght@400;600&display=swap" rel="stylesheet"> -->
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -374,7 +372,15 @@
       Boutique de proximité animée par des passionnés, nous accordons une attention partuculière à l'écoute de chaque client afin de proposer des conseils personnalisés et des solutions parfaitement adaptées à leurs besoins.
     </p>
     <div class="hero-boutique">          
-      <img src="IMG_3264-1.jpg" alt="Intérieur boutique +2 VAPE - Vape shop Les Pennes Mirabeau 13170" width="600" height="400"> 
+      <img 
+  src="IMG_3264-1.jpg"
+  alt="Intérieur boutique +2 VAPE - Vape shop Les Pennes Mirabeau 13170"
+  width="600"
+  height="400"
+  loading="eager"
+  fetchpriority="high"
+  decoding="async"
+>
     </div>   
     <div class="hero-btns">
       <a class="btn btn-ink" href="#univers">Voir nos produits</a>
@@ -398,9 +404,9 @@
         <div class="h-stat-val">🅿</div>
         <div class="h-stat-lbl">Parking gratuit</div>
       </div>
-      <div class="h-stat">
-        <div class="h-stat-val">∅</div>
-        <div class="h-stat-lbl">Frais de conseil</div>
+<div class="h-stat">
+        <div class="h-stat-val">⭐ 4.9/5 ⭐</div>
+        <div class="h-stat-lbl">Avis clients</div>
       </div>
     </div>
   </div>
